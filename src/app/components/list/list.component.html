@@ -1,0 +1,12 @@
+
+
+<a routerLink="add">Add Product</a>
+<h2>List of Product</h2>
+
+@for (item of data(); track item.id) {
+<li>
+    <strong>{{ item.name }}</strong>
+    <br />
+    <app-delete [item]="item" (onConfirm)="getData($event)" />
+</li>
+}

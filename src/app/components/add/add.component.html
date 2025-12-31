@@ -1,0 +1,19 @@
+<h2>Create Product</h2>
+
+<form [formGroup]="form" (ngSubmit)="add()">
+
+  <input type="text" formControlName="name" placeholder="Product Name" />
+  <div formGroupName="data">
+    <input type="date" formControlName="year" placeholder="Year" />
+
+    <input type="number" formControlName="price" placeholder="Price" />
+
+    <input type="text" formControlName="CPU model" placeholder="CPU Model" />
+
+    <input type="text" formControlName="Hard disk size" placeholder="Hard Disk Size" />
+
+  </div>
+
+  <button type="submit">Add Product</button>
+
+</form>
