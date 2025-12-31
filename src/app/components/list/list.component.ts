@@ -21,7 +21,7 @@ export class ListComponent implements OnInit {
     this.getData();
     
   }
-  getData(product?: any): void {
+  protected getData(product?: any): void {
     if (product) {
       this.data.update((products) =>
         products.filter((p) => p.id !== product?.id)

@@ -21,7 +21,7 @@ export class DeleteComponent {
   //out
   @Output() onConfirm = new EventEmitter<IProduct>();
 
-  protected remove(product: IProduct) {
+  protected remove(product: IProduct):void {
     const confirmed = confirm('Are you sure you want to delete this product?');
 
     if (!confirmed) return;
